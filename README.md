@@ -9,7 +9,10 @@ A Go library to encode data for ZATCA FATOORA-compliant QR Codes.
 ## Example Code
 
 ```go
-import "github.com/ibrasho/zatca-fatoora-qr-code"
+import (
+    "github.com/ibrasho/zatca-fatoora-qr-code"
+    "github.com/skip2/go-qrcode"
+)
 
 func main() {
 	qr := fatoora.NewQRData(
@@ -25,5 +28,7 @@ func main() {
 
     // return base64-encoded string (use this to generate the QR)
     qr.Base64()
+
+    // You can use "github.com/skip2/go-qrcode" to generate the actual image
 }
 ```
